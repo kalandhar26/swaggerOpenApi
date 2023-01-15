@@ -1,0 +1,10 @@
+{
+	"Swagger-Application-Security": {
+		"type": "generic application",
+		"Url": "http://test.com",
+		"flow": "application",
+		"scopes": {
+			"api:test-swagger": "This Api is responsible to test swagger docs"
+		}
+	}
+}

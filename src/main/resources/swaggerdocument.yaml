@@ -1,0 +1,69 @@
+---
+swagger: "2.0"
+info:
+  description: "This Project is Just to demonstarte Open API"
+  version: "5.2.0"
+  title: "Open API Application"
+  contact:
+    name: "BabaKalandhar"
+    url: "http://localhost:8086/testOpenApi"
+    email: "babakalandhar499@gmail.com"
+host: "http"
+basePath: "/"
+schemes:
+- "http"
+paths:
+  /test/swagger:
+    get:
+      summary: "get endpoint to test"
+      description: "get endpoints to test"
+      operationId: "getMyname"
+      parameters: []
+      responses:
+        200:
+          description: "OK"
+          schema:
+            type: "string"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        403:
+          description: "Forbidden"
+        404:
+          description: "Not Found"
+        500:
+          description: "Internal Server Error"
+      security:
+      - Swagger-Application-Security:
+        - "api:test-swagger"
+  /test/{fullname}:
+    post:
+      summary: "post endpoints to test"
+      description: "post endpoints to test"
+      operationId: "getMyname"
+      parameters:
+      - name: "full name enter"
+        in: "path"
+        description: "enter your full name"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            type: "string"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+        403:
+          description: "Forbidden"
+        404:
+          description: "Not Found"
+        500:
+          description: "Internal Server Error"
+      security:
+      - Swagger-Application-Security:
+        - "api:test-swagger"
+securityDefinitions: {}
